@@ -6,6 +6,7 @@ import thunk from 'redux-thunk'
 import  { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers/rootReducer'
 import App from './components/App'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
 
 //Need to create a store for redux=> createStore 1.Reducer 2.dev-Tools 
 
@@ -17,7 +18,9 @@ const store = createStore(
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <Router>
+            <App />
+        </Router>    
     </Provider>,
     document.getElementById('root')
 )

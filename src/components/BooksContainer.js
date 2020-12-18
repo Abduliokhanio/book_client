@@ -1,7 +1,10 @@
 //data & methods
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchBooks } from '../actions/booksActions'
+import BooksForm from "./BooksForm";
+import BooksList from './BooksList';
 
 class BooksContainer extends Component {
 
@@ -13,6 +16,9 @@ class BooksContainer extends Component {
         return (
             <div>
                 Books Container
+                {/* Update this refractor */}
+                <BooksList />
+                <BooksForm/>
             </div>
         )
     }
